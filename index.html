@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__left">
+            <div class="content">
+                <form class="card">
+                    <h1 class="card__title">โปรแกรมคำนวณพื้นที่</h1>
+                    <input class="card__input" type="text" placeholder="Input number" id="inputNumber">
+
+                    <div class="selectOptions">
+                        <select class="selectOption__input" id="unitFrom">
+                            <option value="ไร่">ไร่</option>
+                            <option value="งาน">งาน</option>
+                            <option value="ตารางวา">ตารางวา</option>
+                            <option value="ตารางเมตร">ตารางเมตร</option>
+                        </select>
+
+                        <button class="selectOption__button" type="button" onclick="swapUnits()"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+
+                        <select class="selectOption__input" id="unitTo">
+                            <option value="ไร่">ไร่</option>
+                            <option value="งาน" selected>งาน</option>
+                            <option value="ตารางวา">ตารางวา</option>
+                            <option value="ตารางเมตร">ตารางเมตร</option>
+                        </select>
+                    </div>
+
+                    <button class="card__button" type="button" onclick="displayResult()">คำนวณพื้นที่</button>
+
+                    <div class="result">
+                        <p class="result__title">ผลลัพธ์</p>
+                        <div id="result">กรุณากรอกตัวเลข</div>
+                    </div>
+
+                    <hr>
+
+                    <div class="fact">
+                        <h1 class="fact__title">สาระ</h1>
+                        <p class="fact__subtitle">
+                            หน่วยของที่ดินในประเทศไทยจะใช้หน่วย ไร่ งาน และตารางวา <br>
+                            ในส่วนของห้อง หรือพื้นที่ใช้สอย จะใช้หน่วย ตารางเมตร โดย </p>
+                        <ul class="fact__lists">
+                            <li>1 ไร่ = 4 งาน</li>
+                            <li>1 งาน = 100 ตารางวา</li>
+                            <li>1 ตารางวา = 4 ตารางเมตร</li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <p class="footer__text">Created by <a class="footer__link" href="https://github.com/ballpanuwat25">ballpanuwat25</a> 🔥 </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container__right"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
